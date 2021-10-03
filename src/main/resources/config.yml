@@ -1,0 +1,33 @@
+#Detailed documentation can be found at https://github.com/MyCraft-Studio/FindServerPlugin/wiki
+#Download updates only from the link above
+settings:
+  #IP address of your server on FindServer.eu
+  #If it's incorrect, you won't be able to claim your rewards.
+  address: "findserver.eu"
+  #List of commands that will be executed when receiving the reward for liking (if everything is correct)
+  #The %player% variable is the nickname of the player who triggered the command
+  rewardCommands:
+    - 'eco give %player% 200'
+    - 'bc %player% gave like to server on FindServer.eu!'
+  #How often can a command be used?
+  #Time given in seconds
+  cooldown: 30
+  #How often to write data to a file?
+  #Time given in seconds
+  saveData: 600
+
+messages:
+  #Prefix appears before each message
+  prefix: "&7[&6&lFindServer.eu&7] "
+  #Right to call the command /givelike - findserver.use
+  noPerm: "&cYou do not have permissions to this command!"
+  #When an error occurs, the error number will appear in the console
+  connectError: "&cThere was a problem executing your request. Please contact the admin!"
+  #%time% will display the number of seconds
+  cooldownError: "&cYou can only invoke the command in %time% seconds"
+  #Notification when a player did not like the server
+  noLiked: "&cYou haven't liked the server yet! Go to FindServer.eu and like it!"
+  #The #%date% will display the date when the award can be claimed. The format is year-month-day hour:minute:second
+  liked: "&cYou can collect the reward for liking the server again only after %date%"
+  #Content when a player gives a like correctly and receives a reward
+  success: "&aYou have received a reward for liking the server!"

@@ -1,0 +1,22 @@
+name: FindServerPlugin
+version: 1.0.0
+description: FindServerPlugin by Mycraft Studio
+author: Mycraft Studio
+main: pl.znajdzserwer.ZnajdzSerwerPlugin.Main
+commands:
+  findserver:
+    aliases: [findservercollect]
+    permission: findserver.use
+    description: Command that allows you to collect rewards for liking a server on FindServer.eu
+permissions:
+  findserver.*:
+    description: Access to all permissions
+    children:
+      findserver.use: true
+      findserver.cooldown.bypass: true
+  findserver.use:
+    description: Ability to use a command to receive a reward for liking the server
+    default: op
+  findserver.cooldown.bypass:
+    description: Skip the cooldown on using the command to collect a reward
+    default: op
